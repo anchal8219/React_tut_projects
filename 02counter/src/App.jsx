@@ -1,13 +1,22 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-// import './App.css'
+import './App.css'
 
 function App() {
-  let c=16;
+  // let c=16;
+  let [c,setC] = useState(17)
   const add = ()=>{
-    console.log("clicked",Math.random());
-    c = c+1;
+    // console.log("clicked",c);
+    // c = c+1;
+    if(c<20)
+    setC(c+1);
+  }
+
+  const sub=()=>{
+    if(c>0)
+    setC(c-1);
+    // else break;
   }
 
   return (
@@ -17,7 +26,7 @@ function App() {
         <button onClick={add}>Add value
         </button>
         <br/>
-        <button>Remove value
+        <button onClick={sub}>Remove value
         </button>
         
     </>
