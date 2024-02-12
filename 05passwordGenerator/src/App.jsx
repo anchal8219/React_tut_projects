@@ -20,7 +20,6 @@ function App() {
 
     for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1);
-
       pass += str.charAt(char);
     }
 
@@ -28,6 +27,8 @@ function App() {
   }, [length, numberAllowed, charAllowed, setPassword]);
 
   const copyPasswordToClipboard = useCallback(()=>{
+    passwordRef.current?.select(); //for showing the user a better effect
+    // passwordRef.current?.setSelectionRange(0,3);
     window.navigator.clipboard.writeText(password)
   }, [password])
 
