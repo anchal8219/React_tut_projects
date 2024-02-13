@@ -10,7 +10,7 @@ function InputBox({
     amountDisable = false,
     currencyDisable = false,
 
-    className = "",
+    className = ""
 }) {
     const amountInputId = useId()
 
@@ -37,7 +37,7 @@ function InputBox({
             disabled={currencyDisable}
             >
                 {currencyOptions.map((currency) => (
-                    <option  key={currency} value={currency}>
+                    <option key={currency} value={currency}>
                     {currency}
                     </option>
                 ))}
