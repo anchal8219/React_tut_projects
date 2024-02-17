@@ -4,6 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 const Github = () => {
     const data = useLoaderData()
 
+  //here loader concept used to replace this below thats why commented out this
 
     // const [data,setData] = useState([])
     // useEffect(()=>{
@@ -14,6 +15,7 @@ const Github = () => {
     //         setData(data)
     //     })
     // },[])
+    
   return (
     <div className='p-4 m-4 text-3xl text-center text-white bg-gray-600'>
     Github followers: {data.followers}
